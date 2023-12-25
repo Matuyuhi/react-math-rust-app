@@ -1,10 +1,25 @@
 [package]
 name = "wasm"
 version = "0.1.0"
-edition = "2021"
+authors = ["yuhi yamane <bird9.yuhi@gmail.com>"]
+edition = "2018"
+description = "A WebAssembly module for my project."
+repository = "https://github.com/Matuyuhi/react-math-rust-app"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
 crate-type = ["cdylib"]
 [dependencies]
-wasm-bindgen = "0.2"
+wasm-bindgen = "0.2.89"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+
+wee_alloc = { version = "0.4.5", optional = true }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
