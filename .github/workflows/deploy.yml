@@ -1,6 +1,8 @@
 name: Build and Deploy
 on:
   push:
+    tags:
+      - v*
     branches:
       - release/*
   workflow_dispatch:
