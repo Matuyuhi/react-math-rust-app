@@ -1,0 +1,16 @@
+{
+  "calculations": [
+    {
+      "id": "sum",
+      "title": "和の計算",
+      "description": "二つの数の和を計算します。",
+      "inputs": ["number1", "number2"]
+    },
+    {
+      "id": "difference",
+      "title": "差の計算",
+      "description": "二つの数の差を計算します。",
+      "inputs": ["number1", "number2"]
+    }
+  ]
+}
